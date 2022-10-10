@@ -9,11 +9,11 @@
   * Processes are fairly scheduled across all of your cores
 * Concurrency and parallelism as a fundamental run time construct
 * Shared nothing concurrency via message passing
-* Clustering at the run time layer
 * OTP gives us a framework for building concurrent and parallel applications
+* Clustering at the run time layer
 
 ![](images/soul_of_erlang.png)
-https://www.youtube.com/watch?v=JvBT4XBdoUE
+The Soul of Erlang and Elixir - https://www.youtube.com/watch?v=JvBT4XBdoUE
 
 <!-- livebook:{"break_markdown":true} -->
 

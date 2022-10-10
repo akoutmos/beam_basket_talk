@@ -89,7 +89,7 @@ defmodule EventFlusher do
   def handle_info(:perform_cron_work, flush_interval) do
     write_data_to_db = EventCollector.flush_event_counts()
 
-    unless Map.keys(write_data_to_db) == [] do
+    unless map_size(write_data_to_db) == 0 do
       Logger.info(write_data_to_db)
     end
 
@@ -123,7 +123,10 @@ end
 ## Time for a Test Drive
 
 ```elixir
-# Supervisor.stop(SummarizerSupervisor)
+if Process.whereis(SummarizerSupervisor) do
+  Supervisor.stop(SummarizerSupervisor)
+end
+
 SummarizerSupervisor.start_link([]) |> IO.inspect()
 Kino.Process.render_sup_tree(SummarizerSupervisor)
 
@@ -135,7 +138,7 @@ test_users = [
   %User{id: "5", name: "FPFunHouse", plan: :basic}
 ]
 
-1..1_000_000
+1..500_000
 |> Task.async_stream(
   fn _ ->
     user = Enum.random(test_users)
@@ -149,7 +152,9 @@ test_users = [
 ## Visualizing messages
 
 ```elixir
-Supervisor.stop(SummarizerSupervisor)
+if Process.whereis(SummarizerSupervisor) do
+  Supervisor.stop(SummarizerSupervisor)
+end
 
 Kino.Process.render_seq_trace(:all, fn ->
   SummarizerSupervisor.start_link([])

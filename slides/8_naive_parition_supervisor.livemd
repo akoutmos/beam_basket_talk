@@ -111,14 +111,15 @@ end
 ## PartitionSupervisor
 
 ```elixir
-# Supervisor.stop(SummarizerSupervisor)
+if Process.whereis(SummarizerPartitionSupervisor) do
+  Supervisor.stop(SummarizerPartitionSupervisor)
+end
 
 children = [
   {
     PartitionSupervisor,
-    child_spec: SummarizerSupervisor,
-    name: SummarizerPartitionSupervisor,
-    partitions: System.schedulers_online()
+    # System.schedulers_online()
+    child_spec: SummarizerSupervisor, name: SummarizerPartitionSupervisor, partitions: 1
   }
 ]
 

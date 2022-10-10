@@ -2,12 +2,13 @@
 
 ## Fundamentals
 
-* Are cheap and fast to spin up/down
+* Unit of code execution on the BEAM
+* They are cheap and fast to spin up/down
 * Can easily have thousands of them running
 * Each process has its own isolated memory space
   * Heap, stack and mailbox
 * Communicate with one another via message passing
-* Can think of them as independent programs/entities
+* Can think of them as independent programs/entities in your larger Application
   * They all just happen to be running on the same VM
 
 ## What can you do with them?

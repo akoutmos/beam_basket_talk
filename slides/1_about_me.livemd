@@ -10,7 +10,7 @@
   * Coded in Common Lisp, Haskell, and Prolog
   * Came to the conclusion that function programming was something I would never do
 * Specialized in Computer Graphics for my Masters
-* Wrote my dissertation on ray tracing using parallel hardware
+* Wrote my Master's thesis on ray tracing using parallel hardware
 * Optimized ray tracing using CUDA via warp optimization
   * My first taste of parallel programming
     * Felt like I had super powers!
@@ -45,7 +45,7 @@
   ![](images/weather_station.jpg)
 * Currently working on Elixir Patterns with Hugo Barauna
   ![](images/elixir_patterns.png)
-* This talk contains some of the recent work from that book!
+* This talk contains some of the recent work from Elixir Patterns!
 
 <!-- livebook:{"break_markdown":true} -->
 

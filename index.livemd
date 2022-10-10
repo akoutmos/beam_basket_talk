@@ -17,6 +17,8 @@
 * Scaling it up with PartitionSupervisor
   * Is it as easy as 1-2-3?
 
+### Feel free to ask questions at any time!
+
 <!-- livebook:{"break_markdown":true} -->
 
 [Next ->](./slides/1_about_me.livemd)

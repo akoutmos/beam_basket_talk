@@ -6,6 +6,7 @@
 
 * Given that you can have many processes running, you can have a whole cohort of 
   "microservices" all running on the same BEAM instance
+  * "Phoenix is not your application" - Chris McCord
 * The BEAM acts like an OS and ensures that all processes have a fair time slice on the CPU
   * Processes are preempted after a fair time slice and the next process in the scheduler
     queue gets a turn

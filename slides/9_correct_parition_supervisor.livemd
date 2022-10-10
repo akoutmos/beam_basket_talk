@@ -139,7 +139,10 @@ end
 ```
 
 ```elixir
-# Supervisor.stop(SummarizerSupervisor)
+if Process.whereis(SummarizerSupervisor) do
+  Supervisor.stop(SummarizerSupervisor)
+end
+
 SummarizerSupervisor.start_link([]) |> IO.inspect()
 Kino.Process.render_sup_tree(SummarizerSupervisor)
 
