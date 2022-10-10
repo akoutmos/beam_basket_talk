@@ -1,0 +1,22 @@
+# Scaling Up With PartitionSupervisor
+
+## Agenda
+
+### Some theory
+
+* What makes the BEAM so special?
+* What is a process and what's it good for?
+* Treating the BEAM more like an OS and less like a simple run-time
+* Orchestrating processes with Supervisors
+  * Supervisor, DynamicSupervisor, PartitionSupervisor
+
+### Hands on coding
+
+* Dealing with a real-world problem
+* Designing a solution with a single Supervisor
+* Scaling it up with PartitionSupervisor
+  * Is it as easy as 1-2-3?
+
+<!-- livebook:{"break_markdown":true} -->
+
+[Next ->](./slides/1_about_me.livemd)

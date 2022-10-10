@@ -1,0 +1,20 @@
+# Why the BEAM?
+
+## What makes it so special?
+
+* Immutability
+  * Didn't appreciate it in college
+  * Can't live without it in industry
+* Everything runs inside of a process
+  * Processes are fairly scheduled across all of your cores
+* Concurrency and parallelism as a fundamental run time construct
+* Shared nothing concurrency via message passing
+* Clustering at the run time layer
+* OTP gives us a framework for building concurrent and parallel applications
+
+![](images/soul_of_erlang.png)
+https://www.youtube.com/watch?v=JvBT4XBdoUE
+
+<!-- livebook:{"break_markdown":true} -->
+
+[<- Previous](./1_about_me.livemd) | [Next ->](./3_what_is_a_process.livemd)

@@ -1,0 +1,52 @@
+# About Me
+
+## My Journey to Elixir
+
+### University
+
+* Studied Computer Science for undergraduate and graudate school
+  * Primarily worked with Java, C, C++
+* Took a programming languages concepts course
+  * Coded in Common Lisp, Haskell, and Prolog
+  * Came to the conclusion that function programming was something I would never do
+* Specialized in Computer Graphics for my Masters
+* Wrote my dissertation on ray tracing using parallel hardware
+* Optimized ray tracing using CUDA via warp optimization
+  * My first taste of parallel programming
+    * Felt like I had super powers!
+
+![](images/cuda_ray_tracer.png)
+
+### Early Career
+
+* Got my first full time Software Engineering job in 2012
+* Between 3 companies that I worked at I primarily used:
+  * C#, Java, PHP, Python, Javascript
+* Was not very happy developing in these languages/ecosystems
+  * The runtime always felt limiting
+
+### Later Career
+
+* Started looking for a language/ecosystem where concurrency/parallelism was a 1st class citizen
+* Read Go in Action in 2015
+  * The Go concurrency model left a bit to be desired
+* Read Elixir in Action in 2015 and was hooked
+* Got my first full time Elixir job in 2016
+  * Been writing Elixir professionally ever since
+
+### Finding Happiness on the BEAM
+
+* Since 2016 I have been happy working on and with the BEAM
+* Open source library maintainer (PromEx, MJML EEx, Doctor, Unplug, OctoFetch)
+* Open source contributor (Livebook, Phoenix, Broadway, Telemetry, Absinthe)
+* Host on the BEAM Radio podcast
+  ![](images/beam_radio.jpg)
+* Co-author of the Nerves Weather Station book
+  ![](images/weather_station.jpg)
+* Currently working on Elixir Patterns with Hugo Barauna
+  ![](images/elixir_patterns.png)
+* This talk contains some of the recent work from that book!
+
+<!-- livebook:{"break_markdown":true} -->
+
+[<- Previous](../index.livemd) | [Next ->](./2_why_the_beam.livemd)

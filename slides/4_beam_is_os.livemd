@@ -1,0 +1,26 @@
+# The BEAM as Your OS
+
+## The BEAM as an Operating System
+
+### Resource Management
+
+* Given that you can have many processes running, you can have a whole cohort of 
+  "microservices" all running on the same BEAM instance
+* The BEAM acts like an OS and ensures that all processes have a fair time slice on the CPU
+  * Processes are preempted after a fair time slice and the next process in the scheduler
+    queue gets a turn
+* After a process is terminated, its memory space is reclaimed
+
+### Service Initialization
+
+* Linux has SystemD...the BEAM has supervisors
+  * SystemD controls the lifecycle of services in Linux
+  * Supervisors control the lifecycle of processes on the BEAM
+* Supervisors provide the following:
+  1. Initialize processes and child supervisors in a deterministic and
+     reproducible order when your application is started
+  2. Restart child processes when unrecoverable errors are encountered
+  3. Stopping processes in a dependable order when the virtual machine is sent a
+     SIGTERM signal from the operating system
+
+[<- Previous](./3_what_is_a_process.livemd) | [Next ->](./5_process_orchestration.livemd)

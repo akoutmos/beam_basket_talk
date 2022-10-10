@@ -1,0 +1,38 @@
+# Solving a Realistic Problem
+
+## What are we building?
+
+### Problem
+
+We run an API as a service and charge customers based on the number of calls that they make
+to the API. All calls to the API count the same and are not weighted differently.
+
+### Requirements
+
+We would also like to have a resolution of 5 minutes so that we can see how many API calls
+are made within a 5 minute window per customer.
+
+### Proposed Solution
+
+We will create a simple supervision tree with two processes:
+
+* `EventCollector` - Collects and aggregates `cast` messages from a Phoenix Plug
+* `EventFlusher` - Flushes the aggregated messages from `EventCollector` and writes them to
+  TimescaleDB every 5 minutes or sends them to another service
+
+```mermaid
+graph TD;
+  classDef supervisor fill:#7dd3fc,stroke:#888;
+  classDef process fill:#c4b5fd,stroke:#888;
+
+  a(SummarizerSupervisor):::supervisor
+  b(EventCollector):::process
+  c(EventFlusher):::process
+
+  a --> b
+  a --> c
+```
+
+<!-- livebook:{"break_markdown":true} -->
+
+[<- Previous](./5_process_orchestration.livemd) | [Next ->](./7_single_supervisor_solution.livemd)

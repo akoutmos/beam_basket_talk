@@ -1,0 +1,29 @@
+# What is a Process?
+
+## Fundamentals
+
+* Are cheap and fast to spin up/down
+* Can easily have thousands of them running
+* Each process has its own isolated memory space
+  * Heap, stack and mailbox
+* Communicate with one another via message passing
+* Can think of them as independent programs/entities
+  * They all just happen to be running on the same VM
+
+## What can you do with them?
+
+* Storing state
+  * Singleton processes can be useful for easily accessing data application wide
+* Cron jobs
+  * PromEx polls various BEAM internals and creates Prometheus metrics
+* Supervising/monitoring other processes
+  * Supervisors are also processes under the hood
+* Initializing your application
+  * Can run Ecto migrations in a GenServer prior to starting HTTP server
+  * Hydrate cache (`:persistent_term` or `:ets`)
+* Worker pools
+* Effortless parallel processing via `Task.async_stream/5`
+
+<!-- livebook:{"break_markdown":true} -->
+
+[<- Previous](./2_why_the_beam.livemd) | [Next ->](./4_beam_is_os.livemd)

@@ -1,0 +1,24 @@
+# Process Orchestration and Supervision
+
+## Different Kinds of Elixir Supervisors
+
+### Supervisor
+
+* When your child process list is known ahead of time
+* Great when you want to componentize part of your system
+  * Encapsulate several processes under one supervision tree
+
+### DynamicSupervisor
+
+* When you don't know what child processes will be running under the supervisor
+* New processes are started frequently and old processes terminate
+  * When paired with `Registry` module you can implement a lightweight process backed KV store
+
+### PartitionSupervisor
+
+* Horizontally scale (replicate) a supervision tree or processes
+* Deterministically route messages to partitions
+
+<!-- livebook:{"break_markdown":true} -->
+
+[<- Previous](./4_beam_is_os.livemd) | [Next ->](./6_problem_intro.livemd)
